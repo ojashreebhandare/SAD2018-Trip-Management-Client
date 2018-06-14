@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+<h:head>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <title>JSF REST Example</title>
+
+    <style type="text/css">
+
+        .tableOutput {
+
+            margin: 12px;
+
+            width: 98% !important;
+
+        }
+
+
+
+        .tab {
+
+            display: inline-block;
+
+            margin-left: -2px;
+
+        }
+
+    </style>
+
+</h:head>
+
+
+<h:body>
+
+    <h2>Hello !</h2>
+    <h:form>
+        <h:outputText value="Select user to sudo." />
+        <div class="container">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-brand">TRIPS</div>
+            </div>
+            <h:link outcome="ticket" styleClass="tableOutput" >
+                <span class="tab" >BOOKED TRIPS</span>
+            </h:link>
+            <table class="table table-bordered table-striped table-hover tableOutput">
+                <thead>
+                <tr>
+                    <th>jfajfkjfkajk</th>
+                    <th>asfasfsaffasasfafs</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <ui:repeat value="#{Rest.restTrips}" var="alle" >
+                    <tr>
+                        <td>#{alle.package_name}<span class="glyphicon glyphicon-edit"></span></td>
+                        <td>#{alle.destination}</td>
+                        <td>#{alle.discount}</td>
+                        <td>#{alle.hotel_name}</td>
+                        <td>#{alle.mode_of_transport}</td>
+                        <td>#{alle.no_of_nights }</td>
+                        <td>#{alle.package_cost }</td>
+                        <td>#{alle.package_id }</td>
+                        <td>#{alle.source }</td>
+                        <td>#{alle.trip_desc }</td>
+-->
+                        <td><h:commandButton value="SELECT >>Trip" action="login" styleClass="btn btn-default"/></td>
+                    </tr>
+                </ui:repeat>
+
+                </tbody>
+
+            </table>
+
+
+        </div>
+    </h:form>
+
+</h:body>
+
+
+</html>

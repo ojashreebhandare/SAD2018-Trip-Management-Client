@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>drake</groupId>
+    <artifactId>trip-management-gui</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <packaging>pom</packaging>
+
+    <name>trip-management-gui</name>
+    <url>https://maven.apache.org</url>
+
+    <properties>
+        <version.javax.servlet>3.0.1</version.javax.servlet>
+        <version.mojarra>2.2.10</version.mojarra>
+        <version.httpclient>4.5.1</version.httpclient>
+        <version.javax.validation>1.1.0.Final</version.javax.validation>
+
+
+        <database.server>localhost</database.server>
+        <database.port>3306</database.port>
+        <database.name>test</database.name>
+        <database.username>root</database.username>
+        <database.password>123456</database.password>
+    </properties>
+    <dependencies>
+        <!-- java servlet api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${version.javax.servlet}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Mojarra api of jsf - needed for tomcat  -->
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>${version.mojarra}</version>
+        </dependency>
+        <!-- Mojarra Implementation of jsf -->
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-impl</artifactId>
+            <version>${version.mojarra}</version>
+        </dependency>
+        <!-- Bean validation api -->
+        <!--TODO: use this api-->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${version.javax.validation}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-common</artifactId>
+            <version>2.26</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.inject</groupId>
+            <artifactId>jersey-hk2</artifactId>
+            <version>2.26</version>
+        </dependency>
+        <!--
+        TODO: USE THIS
+         Most common Apache Libraries
+         -->
+
+       <!-- <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${version.httpclient}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${version.commons.codec}</version>
+        </dependency>
+        -->
+        <!-- Dynamic report -->
+        <dependency>
+            <groupId>net.sourceforge.dynamicreports</groupId>
+            <artifactId>dynamicreports-core</artifactId>
+            <version>3.1.3</version>
+        </dependency>
+
+        <!-- JDBC config -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.0.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-client -->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>2.26</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-server -->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>2.26</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson -->
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+            <version>2.26</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>2.26</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-common</artifactId>
+            <version>2.26</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.inject</groupId>
+            <artifactId>jersey-hk2</artifactId>
+            <version>2.26</version>
+        </dependency>
+        <!-- JDBC connection parameters
+        <jdbc>
+            <driver>com.mysql.jdbc.Driver</driver>
+            <url>jdbc:mysql://${database.server}:${database.port}/${database.name}</url>
+            <user>${database.username}</user>
+            <password>${database.password}</password>
+        </jdbc>-->
+    </dependencies>
+    
+</project>
